@@ -23,14 +23,13 @@ function App() {
   const handleAddressChange = (e) => {
     setAddressInput(e.target.value);
   };
-  
+
   const handleGetBalance = async () => {
     if (addressInput) {
       const balanceResult = await getBalance(addressInput);
       setBalance(balanceResult);
     }
   };
-
   return (
     <div className="App">
       <h1>Wallet Connection</h1>
